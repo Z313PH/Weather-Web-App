@@ -12,7 +12,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
-    fetch('https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=Z1NzV9oGSFGlEcsgO9dDOtqfYirSa3zI')
+    fetch(`https://api.tomorrow.io/v4/weather/forecast?${city}=42.3478,-71.0466&apikey=${APIKey}`)
         .then(response => response.json())
         .then(json => {
 
